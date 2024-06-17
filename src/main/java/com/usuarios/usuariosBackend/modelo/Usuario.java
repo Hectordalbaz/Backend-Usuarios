@@ -1,6 +1,12 @@
 package com.usuarios.usuariosBackend.modelo;
 
+import java.util.Collection;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,7 +17,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "usuarios")
-public class Usuario {
+public class Usuario implements UserDetails{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id_usuario;
@@ -134,6 +140,33 @@ public class Usuario {
 
 	public void setUsu_ult_mod(String usu_ult_mod) {
 		this.usu_ult_mod = usu_ult_mod;
+	}
+
+
+	/*@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		Set<Autoridad> autoridades=new HashSet<>();
+	}*/
+
+
+	@Override
+	public String getPassword() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public String getUsername() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	

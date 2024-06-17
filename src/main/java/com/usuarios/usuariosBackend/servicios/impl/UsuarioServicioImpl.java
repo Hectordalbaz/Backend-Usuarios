@@ -1,10 +1,11 @@
-package com.usuarios.usuariosBackend.servicios;
+package com.usuarios.usuariosBackend.servicios.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.usuarios.usuariosBackend.modelo.Usuario;
 import com.usuarios.usuariosBackend.repositorio.UsuarioRepositorio;
+import com.usuarios.usuariosBackend.servicios.UsuarioServicio;
 
 @Service
 public class UsuarioServicioImpl implements UsuarioServicio{
